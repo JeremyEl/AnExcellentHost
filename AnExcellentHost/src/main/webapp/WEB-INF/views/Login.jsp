@@ -33,6 +33,9 @@
                     <li>
                         <a href="#">About/Contact</a>
                     </li>
+                    <li>
+                        <a href="./UploadImage">Upload Image</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -48,25 +51,22 @@
         <br></br>
         <form>
             <div>
-                
                 <input id="Username" class="box" type="text" name="Username" title="Username" 
                         placeholder="Username"   /> 
             </div>
-            <br></br>
+            	<br/>
             <div>
-                
                 <input id="password" class="box" type="password" name="password" title="password" 
                         placeholder="Password" /> 
             </div>
-            <br></br>
-
+            <br/>	
             <div>
                 <input type="submit" class="pass" value="LOGIN" />
             </div>
-            <br></br>
-            
-        </div>
-        </form>
+            	<br/>
+       </form>
+    </div>
+        
         <br/>
         <button style="opacity: 50%;">
             <a href="./CreateAccount"><div style="width: 270px; color: black; font-size: 16px; border:0; outline: none; " >Create Account</div></a>

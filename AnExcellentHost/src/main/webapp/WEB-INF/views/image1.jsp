@@ -32,6 +32,9 @@
                     <li>
                         <a href="#">About/Contact</a>
                     </li>
+                    <li>
+                        <a href="./UploadImage">Upload Image</a>
+                    </li>
                 </ul>
             </nav>
         </div>

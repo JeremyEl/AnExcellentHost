@@ -8,5 +8,6 @@ public interface ImageService {
 	Image findImageById(int imageId);
 	Image findImageByName(String imageName);
 	void removeImage(Image image);
+	Image save(Image image);
 }
 

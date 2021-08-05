@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"
+    import="org.perscholas.models.User"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,24 +43,24 @@
             </nav>
         </div>
     </div>
-<!-- INCLUDE A BOX FOR PASSWORD REQUIREMENTS-->
+<!-- INCLUDE A BOX TO SPECIFY PASSWORD REQUIREMENTS-->
     <div style=" height: max-content; padding: 100px; text-align: center; display: flex; justify-content: center;">
 
         <div id="container" style="width: 1000px; height: 450px; background-color: rgb(150,150,150); 
                         padding-bottom: 60px; ">
     
             <br></br>
-            <form onsubmit="return(verifyPassword())" method="post"> 
+            <form:form onsubmit="return(verifyPassword())" action="createUser"  method="post" modelAttribute="user"> 
                 <div>
                     <div class="instructions">Select a Username:</div>
-                    <input id="Username" class="box" type="text" name="Username" title="Username" 
-                            placeholder="Username"  required/> 
+                    <input  id="Username" class="box" type="text" name="Username" title="Username" 
+                            placeholder="Username"  /> 
                 </div>
                 <br/></br>
                 <div>
                     <div class="instructions">Select a Password:</div>
-                    <input class="box" type="password"  id="passingWord1" 
-                            placeholder="Password" value="" required/> 
+                    <input  class="box" type="password"  id="passingWord1" 
+                            placeholder="Password" value="" /> 
                 </div>
                 <br/></br>
                 <div>
@@ -95,7 +99,7 @@
 
                 </div>  
                 
-            </form> 
+            </form:form> 
         </div>
 
     </div>

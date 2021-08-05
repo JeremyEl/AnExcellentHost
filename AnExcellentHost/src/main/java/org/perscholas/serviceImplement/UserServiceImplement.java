@@ -24,8 +24,8 @@ public class UserServiceImplement implements UserService {
 	}
 
 	@Override
-	public User findUserById(int id) {
-		Optional<User> optUser = userRepository.findById(id);
+	public User findById(int id) {
+		Optional<User> optUser = Optional.ofNullable(userRepository.findById(id));
 		if (optUser.isPresent()) {
 			return optUser.get();
 		}
@@ -39,10 +39,22 @@ public class UserServiceImplement implements UserService {
 
 	@Override
 	public Iterable<User> getAll() {
-		// TODO Auto-generated method stub
+		return (Iterable<User>) userRepository.findAll();
+	}
+
+	@Override
+	public User save(User user) {
+		return userRepository.save(user);
+	}
+
+	@Override
+	public User findUserById(int id) {
+		Optional<User> optUser = Optional.ofNullable(userRepository.findById(id));
+		if (optUser.isPresent()) {
+			return optUser.get();
+		}
 		return null;
 	}
-	
-	 
+
 
 }

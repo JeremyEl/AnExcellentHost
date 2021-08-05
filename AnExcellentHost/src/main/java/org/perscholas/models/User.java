@@ -1,41 +1,62 @@
 package org.perscholas.models;
 
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.JoinColumn;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="users")
-public class User {
+public class User implements Serializable {
 	
 //	@OneToMany(targetEntity = Image.class)
 //	private 
 	
-//	@ManyToMany(targetEntity = Friends.class)
-//	private
+//	@ManyToMany(targetEntity = Friend.class)
+//	@JoinTable(name = "friends",
+//	joinColumns = {
+//		@JoinColumn(name = "fk_user")
+//	},
+//	inverseJoinColumns = {
+//		@JoinColumn(name = "fk_friend")
+//	})
+//	private List<Friend> friends = new ArrayList<>();
 	
 //	@OneToMany(targetEntity = Comments.class)
 //	private
 	
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "id")
 	private int id;
 	@NotEmpty(message="Cannot be nothing")
-	@Size(min=2, max=50)
+	@Size(min=2, max=50, message="Must be 2-50 characters")
+	@Column(name = "name")
 	private String name;
 //	@NotEmpty(message="must not be empty")
 //	private String email;
-	@Size(min=2, max=50)
+	@Size(min=2, max=50, message="Must be 2-50 characters")
+	@Column(name = "password")
 	private String password;
 	
 	public User() {}
 
 //	public User(String name, String email, String password) {
-	public User(String name, String password) {
+	public User(int id, String name, String password) {
+		super();
+		this.id = id;
 		this.name = name;
 //		this.email = email;
 		this.password = password;

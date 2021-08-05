@@ -52,72 +52,20 @@
 
     
         <br/>
-    
-    <div class="main_content">
-    <script type=".js/Randomize.js"></script>
-        <div class="sub_main">
-
-            <div class="main_item">
-                <a href="./image1">
-                    <img class="thumbnail" src="./images/EnlistedDuck.png" />
-                </a>
-            </div>
-
-           <div class="main_item">
-                <div>
-                	 <img class="thumbnail" id="result" src="ImageArray()" />
-                </div>
-            </div>
-
-            <div class="main_item">
-                <div>
-                    <span id="result"> </span>   
-                </div>      
-            </div>
-            
-            <div class="main_item" id="result">
-            
-            </div>
-
-            <div class="main_item" >
-            	<div id="result">
-            	
-            	</div>               
-            </div>
-
-            <div class="main_item">
-                <div >
-                    <img class="thumbnail" id="result" />
-                </div>
-            </div>
-
-            <div class="main_item">
-                <div>
-                    
-                </div> 
-            </div>
-
-            <div class="main_item">
-                <div>
-                    
-                </div>
-            </div>
-
-            <div class="main_item">
-                <div>
-                    
-                </div>
-            </div>
-
-            <div class="main_item">
-                <div>                    
-                    
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
+       
+       <h1>Upload an image here</h1>
+       <h5>This is a temporary page used to prove that the image database model works.</h5>
+       <h5>This should display the image uploaded and return the information provided.</h5>
+       
+       <form>
+       		<form:form>
+       		
+       
+       
+       		</form:form>
+       </form>
+       
+       
+        
 </body>
-
 </html>
