@@ -1,0 +1,9 @@
+How to save with Git Bash.
+
+Don't forget trailing /
+The file in Programming folder is not where Eclipse saves it to. Either change it out or overwrite it with the real file every time you want to commit a new push
+
+cd C:/Users/space/Documents/Programming/GitRepository-ExcellentHost/
+git add .
+git commit -m "Write a message here"
+git push
