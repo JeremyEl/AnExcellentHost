@@ -1,0 +1,42 @@
+table{
+
+    float: left;
+    justify-self: left;
+    flex-direction: column;
+    color: white;
+    border: white;
+    border:1px;
+
+}
+
+table td {
+    text-align: left;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.imagePost{
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	position: relative;
+		
+}
+
+.imageItself{
+	max-width: 1000px;
+    height: 100%; 
+    border-radius: 1px;
+    overflow: hidden;
+    padding: -20px;
+
+ 
+}
+
+.description{
+	display: flex;
+	
+	
+}
