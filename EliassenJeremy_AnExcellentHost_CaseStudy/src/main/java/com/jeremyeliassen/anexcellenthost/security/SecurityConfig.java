@@ -18,6 +18,8 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+	//This class came largely pre-packaged. I didn't change a much.
+	
 	private UserDetailsService userDetailsService;
 	
 	@Autowired
@@ -52,9 +54,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		.authorizeRequests()
 		// Permit all users to access the register page and register post method
-		.antMatchers("/login", "/register", "/registerNewUser", "/homePage","/about", "/image_form",
-				"/uploadImage","/image1", "/userGetIn", "/createUser", "/view_image_detail/*", 
-				"/saveImage", "/displayNewImage", "/", "/createAccount", "/view_image_detail").permitAll()
+		.antMatchers("/about",  "/create_account", "/display", "/enter", "/home", "/logout", 
+				"/upload", "/view", "/view/*", "/login", "/createUser", "/").permitAll()
 		// Restrict Admin page to "ADMIN" roles
 		.antMatchers("/admin").hasRole("ADMIN")
 		.anyRequest().authenticated()

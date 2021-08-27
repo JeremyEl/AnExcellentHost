@@ -18,11 +18,8 @@
     <div style=" height: max-content; text-align: center; width: 100%; display: block;">
 
 	    <div id="container" style="width: 800px; height: 150px; background-color: rgb(150,150,150); 
-	                    padding-bottom: 60px;  margin:auto;">
-	
-	        
-	        <br></br>
-	        
+	                    padding-bottom: 60px;  margin:auto;">	        
+	        <br/>
 	        <form action="login" method="post">
 	            <div>
 	                <input id="Username" class="box" type="text" name="username" title="Username" 
@@ -39,14 +36,14 @@
 	            <div>
 	                <input type="submit" class="pass" value="LOGIN" />
 	            </div>
-	            
 	            	<br/>
 	       </form>
 	    </div>
-        
         <br/>
-        <button style="opacity: 50%;">
-            <a href="./createAccount"><div style="width: 270px; color: black; font-size: 16px; border:0; outline: none; " >Create Account</a>
+        <button style="opacity: 50%;"> <!-- Seems pretty valid to me. Won't work otherwise. -->
+            <a href="./create_account">
+               <div style="width: 270px; color: black; font-size: 16px; border:0; outline: none; " >Create Account</div>
+            </a>
         </button>
         <br/>
         <br/>

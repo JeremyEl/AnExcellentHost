@@ -26,11 +26,10 @@ public class UserServiceImplement implements UserService {
 	
 	@Override
 	public User createUser(User user) {
-		//Put in a check to see if the user exists here
+		//Need to put in a check to see if the username already exists here
 		user.setPassword(pswdEncoder.encode(user.getPassword()));
 		return userRepository.save(user);
 	}
-
 
 	@Override
 	public User findById(Integer id) {
@@ -55,7 +54,4 @@ public class UserServiceImplement implements UserService {
 	public Iterable<User> getAll() {
 		return (Iterable<User>) userRepository.findAll();
 	}
-
-
-
 }

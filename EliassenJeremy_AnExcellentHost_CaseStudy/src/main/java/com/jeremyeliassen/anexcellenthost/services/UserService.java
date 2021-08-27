@@ -5,7 +5,6 @@ import com.jeremyeliassen.anexcellenthost.models.User;
 public interface UserService {
 	User createUser(User user);
 	User findById(Integer id);
-//	User findUserByEmail(String email);
 	void removeUser(User user);
 	Iterable<User> getAll();
 	User findByUsername(String username);

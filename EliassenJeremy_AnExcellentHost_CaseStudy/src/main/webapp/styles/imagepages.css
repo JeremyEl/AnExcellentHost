@@ -1,4 +1,4 @@
-table{
+.tagList{
 
     float: left;
     justify-self: left;
@@ -6,10 +6,18 @@ table{
     color: white;
     border: white;
     border:1px;
-
+	position: absolute;
+	margin-top: 10px;
+	padding-top: 10px;
 }
 
-table td {
+.addTagButton{
+	position: relative;
+	top:0;
+	left:0;
+}
+
+.tagList td {
     text-align: left;
     font-size: 20px;
     padding: 5px;
@@ -22,7 +30,8 @@ table td {
 	justify-content: center;
 	color: white;
 	position: relative;
-		
+	padding: 20px;
+	z-index: 0;
 }
 
 .imageItself{
@@ -30,13 +39,67 @@ table td {
     height: 100%; 
     border-radius: 1px;
     overflow: hidden;
-    padding: -20px;
-
- 
+    z-index: 0;
 }
 
 .description{
 	display: flex;
-	
-	
+	width: 500px;
+	height: 100%;
+	text-align: justify;
+	background-color: black;
+	border-radius: 5px;
+    padding: 18px;
+    background-color: rgb(45,45,45);
+}
+
+
+
+.comment-text {
+    color: white;
+    font-size: 12px;
+    border: 10px;
+    border-radius: 5px;
+    display: flex;
+    width: 500px;
+    height: 100%;
+    text-align: justify;
+    padding: 18px;
+    background-color: rgb(45, 45, 45);
+    align-content: center;
+    
+}
+
+.name {
+    color: #007bff;
+    font-size: 12px;
+    border: 10px;
+    border-radius: 5px;
+    display: flex;
+    width: 525px;
+    height: 100%;
+    text-align: justify;
+    padding: 5px;
+    background-color: rgb(45, 45, 45);
+}
+
+.textBox{
+  width: 530px;
+  display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
+}
+
+.commentList{
+	align-items: center;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.btn {
+	display: flex;
+	flex-direction:column;
+	align-items: center;
+	justify-content: center;
 }

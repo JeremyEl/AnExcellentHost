@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
@@ -18,14 +16,13 @@ public class Tag {
 	
 	@Id
 	@NotNull
-	@Size(max=40)
+	@Size(max=50)
 	@Column(name="term")
 	private String term;
 	@Column(name="voteCount")
 	private int vote;
 	@ManyToMany(mappedBy = "tagAssignment")
 	private List<Image> imageList;
-	
 	
 	public Tag() {
 		this.vote = 0;
@@ -59,6 +56,4 @@ public class Tag {
 		this.imageList = imageList;
 	}
 	
-	
-
 }

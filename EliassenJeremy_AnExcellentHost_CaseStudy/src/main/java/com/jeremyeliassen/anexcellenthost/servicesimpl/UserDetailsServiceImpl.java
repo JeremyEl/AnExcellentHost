@@ -10,6 +10,8 @@ import com.jeremyeliassen.anexcellenthost.models.User;
 import com.jeremyeliassen.anexcellenthost.repositories.UserRepository;
 import com.jeremyeliassen.anexcellenthost.security.CurrentUser;
 
+//This is a class involved with Spring. I did not write this, change it, or do anything with it.
+//But if I delete it, everything breaks, so here it stays.
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

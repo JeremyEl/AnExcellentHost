@@ -29,12 +29,11 @@ public class Comment implements Serializable {
 	@ManyToOne
 	private Image imagePost;
 	@ManyToOne
-	private User commmentPoster;
+	private User commentPoster;
 	
 	public Comment () {}
 	
-	public Comment(int commentId, String commentBody) {
-		this.commentId = commentId;
+	public Comment(String commentBody) {
 		this.commentBody = commentBody;
 	}
 
@@ -62,18 +61,16 @@ public class Comment implements Serializable {
 		this.imagePost = imagePost;
 	}
 
-	public User getCommmentPoster() {
-		return commmentPoster;
+	public User getcommentPoster() {
+		return commentPoster;
 	}
 
-	public void setCommmentPoster(User commmentPoster) {
-		this.commmentPoster = commmentPoster;
+	public void setcommentPoster(User commentPoster) {
+		this.commentPoster = commentPoster;
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-	
-	
 }

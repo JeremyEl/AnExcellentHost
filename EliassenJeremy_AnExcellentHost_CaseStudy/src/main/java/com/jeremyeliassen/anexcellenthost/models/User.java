@@ -8,12 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.JoinColumn;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
@@ -27,12 +23,11 @@ public class User implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
-	@NotEmpty(message="Cannot be nothing")
-	@Size(max=500, message="Must be less than 50 characters")
+	@NotEmpty
+	@Size(max=500)
 	@Column(name = "username")
 	private String username;
-//	private String email;
-	@Size(min=2, max=100, message="Must be no more than 100 characters")
+	@Size(min=0, max=100)
 	@Column(name = "password")
 	private String password;
 	private String userRole;
@@ -45,16 +40,11 @@ public class User implements Serializable {
 		this.userRole = "ROLE_USER";
 	}
 
-//	public User(String name, String email, String password) {
-	public User(int id, String username, String password) {
+	public User(String username, String password) {
 		super();
-		this.id = id;
 		this.username = username;
-//		this.email = email;
 		this.password = password;
 	}
-	
-
 
 	public int getId() {
 		return id;
@@ -96,7 +86,6 @@ public class User implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-//		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + id;
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
@@ -112,11 +101,6 @@ public class User implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-//		if (email == null) {
-//			if (other.email != null)
-//				return false;
-//		} else if (!email.equals(other.email))
-//			return false;
 		if (id != other.id)
 			return false;
 		if (username == null) {
@@ -137,6 +121,4 @@ public class User implements Serializable {
 		return "User [id=" + id + ", name=" + username + ", password=" + password + "]";
 	}
 
-
-	
 }

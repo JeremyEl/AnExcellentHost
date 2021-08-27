@@ -11,6 +11,8 @@ import com.jeremyeliassen.anexcellenthost.models.User;
 
 
 public class CurrentUser implements UserDetails {
+	
+	//This class came pre-packaged. I did not touch this class once except for this comment.
 
 	private static final long serialVersionUID = 1L;
 	
@@ -55,5 +57,15 @@ public class CurrentUser implements UserDetails {
 	public boolean isEnabled() {
 		return true;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
+	
 
 }

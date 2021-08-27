@@ -2,8 +2,6 @@ package com.jeremyeliassen.anexcellenthost.models;
 
 import java.io.Serializable;
 import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,22 +13,24 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-//import javax.validation.constraints.NotNull;
+
 
 @Entity
 @Table(name="images")
 public class Image implements Serializable {
 	
+	//This class utilizes a BLOB whic stores the actual image itself into the database.
+	//It works for a project this small, but I don't think it's scalable.
+	//Also imageName and imageFileName are somewhat reversed, but I decided not to fix it.
+	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name = "imageId")
+	@Column(name = "image_id")
 	private int imageId;
-//	@NotNull
-	@Column(name = "imageName")
+	@Column(name = "image_name")
 	private String imageName;
 	@Column(name = "description")
 	private String description;
@@ -44,14 +44,12 @@ public class Image implements Serializable {
 	@ManyToMany
 	@JoinTable(
 			name = "tagAssignment",
-			joinColumns = @JoinColumn(name = "imageId"),
+			joinColumns = @JoinColumn(name = "image_id"),
 			inverseJoinColumns = @JoinColumn(name = "term"))
 	private List<Tag> tagAssignment;
 	@ManyToOne
 	private User userPoster;
 	
-	
-
 	public Image() {}
 	
 	public Image(int imageId, String imageName, String description) {
@@ -161,9 +159,5 @@ public class Image implements Serializable {
 			return false;
 		return true;
 	}
-
-	
-	
-	
 	
 }
